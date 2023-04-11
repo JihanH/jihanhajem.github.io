@@ -231,3 +231,27 @@ Generic layout (demo looks)
     height: 500px;
     width: 1000px;
 }
+
+@media screen and (max-width: 800px) {
+    #themispage {
+        height: 300px;
+        width: 600px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #galliapage {
+        height: 300px;
+        width: 500px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #cgj {
+        height: 800px;
+        width: 500px;
+
+    }
+}
