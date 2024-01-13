@@ -1,257 +1,46 @@
-body {
-    background-color: #101010;
-    /*background-color: #cbccce;*/
-    font-family: 'Raleway', sans-serif;
-}
 
-nav-link {
-    color: white;
-}
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
 
-h1 {
-    font-size: 100px;
-}
+        h2 {
+            color: #ffd1dc; /* Couleur dorée pour les titres h2 */
+            border-bottom: 2px solid #ffd1dc; /* Bordure dorée sous les titres h2 */
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
 
-div {
-    color: white;
-}
+        h3 {
+            color: #ffd1dc; /* Couleur dorée pour les titres h3 */
+        }
 
-#Layer_1 {
-    width: 60px;
-    height: 60px;
-}
+        section {
+            margin-bottom: 30px;
+        }
 
-article {
-    --img-scale: 1.001;
-    --title-color: black;
-    --link-icon-translate: -20px;
-    --link-icon-opacity: 0;
-    position: relative;
-    border-radius: 16px;
-    box-shadow: none;
-    background: #fff;
-    transform-origin: center;
-    transition: all 0.4s ease-in-out;
-    overflow: hidden;
-}
+        ol, ul {
+            margin-left: 20px;
+        }
 
-article a::after {
-    position: absolute;
-    inset-block: 0;
-    inset-inline: 0;
-    cursor: pointer;
-    content: "";
-}
+        footer {
+            margin-top: 50px;
+        }
 
-/* basic article elements styling */
-article h2 {
-    margin: 0 0 18px 0;
-    font-size: 1.9rem;
-    letter-spacing: 0.06em;
-    color: var(--title-color);
-    transition: color 0.3s ease-out;
-}
+        .traces {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* You may adjust this based on your layout needs */
+        }
+        
+        img {
+            max-width: 50%; /* Ensure the image doesn't exceed the container width */
+            max-height: 50%; /* Ensure the image doesn't exceed the container height */
+            display: block; /* Remove default inline behavior */
+        }
+        
 
-figure {
-    margin: 0;
-    padding: 0;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-}
-
-article img {
-    max-width: 100%;
-    transform-origin: center;
-    transform: scale(var(--img-scale));
-    transition: transform 0.4s ease-in-out;
-}
-
-.article-body {
-    padding: 24px;
-}
-
-article a {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: #28666e;
-}
-
-article a:focus {
-    outline: 1px dotted #28666e;
-}
-
-article a .icon {
-    min-width: 24px;
-    width: 24px;
-    height: 24px;
-    margin-left: 5px;
-    transform: translateX(var(--link-icon-translate));
-    opacity: var(--link-icon-opacity);
-    transition: all 0.3s;
-}
-
-/* using the has() relational pseudo selector to update our custom properties */
-article:has(:hover, :focus) {
-    --img-scale: 1.1;
-    --title-color: #28666e;
-    --link-icon-translate: 0;
-    --link-icon-opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-
-/************************
-Generic layout (demo looks)
-**************************/
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-.articles {
-    display: grid;
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-}
-
-@media screen and (max-width: 960px) {
-    article {
-        container: card/inline-size;
-    }
-
-    .article-body p {
-        display: none;
-    }
-}
-
-@container card (min-width: 380px) {
-    .article-wrapper {
-        display: grid;
-        grid-template-columns: 100px 1fr;
-        gap: 16px;
-    }
-
-    .article-body {
-        padding-left: 0;
-    }
-
-    figure {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    figure img {
-        height: 100%;
-        aspect-ratio: 1;
-        object-fit: cover;
-    }
-}
-
-.sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
-
-#tl {
-    margin-top: 70px;
-    margin-left: 10px;
-
-
-}
-
-.timeline {
-    max-width: 800px;
-    border-left: 2px solid #ccc;
-    padding-left: 10px;
-}
-
-.event {
-    margin-bottom: 60px;
-}
-
-.date {
-    top: 0;
-    left: -150px;
-    width: 140px;
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-#apropos {
-    margin-top: 400px;
-    color: white;
-    font-size: 50px;
-}
-
-.maformation {
-    margin-top: 50px;
-    font-size: 40px;
-}
-
-.icon {
-    height: 50px;
-    width: 50px;
-}
-
-#name {
-    margin-top: 200px;
-}
-
-#contact {
-    margin-top: 200px;
-}
-
-#gallia {
-    height: 210px;
-    width: 400px;
-}
-
-#galliapage{
-    height: 500px;
-    width: 1000px;
-}
-
-#themispage{
-    height: 500px;
-    width: 1000px;
-}
-
-@media screen and (max-width: 800px) {
-    #themispage {
-        height: 300px;
-        width: 600px;
-
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #galliapage {
-        height: 300px;
-        width: 500px;
-
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #cgj {
-        height: 800px;
-        width: 500px;
-
-    }
-}
