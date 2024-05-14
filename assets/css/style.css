@@ -50,3 +50,11 @@
             color: aliceblue;
         }
 
+        #img2 {
+            max-width: 40%; /* Ensure the image doesn't exceed the container width */
+            max-height: 40%; /* Ensure the image doesn't exceed the container height */
+            display: block; /* Remove default inline behavior */
+            margin-left: 30%;
+        }
+        
+
